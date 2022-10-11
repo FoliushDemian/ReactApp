@@ -10,9 +10,9 @@ function Header() {
             <img src={logotype} className="logotype" />
             <h1>Tabletki UA</h1>
             <nav>
-                <a href="#">Home</a>
-                <a href="#">Catalog</a>
-                <a href="#">Cart</a>
+                <a href="/">Home</a>
+                <a href="/catalog">Catalog</a>
+                <a href="/cart">Cart</a>
             </nav>
             <img src={cart} className="cart"/>
             <img src={user} className="user"/>

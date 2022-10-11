@@ -5,7 +5,6 @@ import {ReactComponent as Twitter} from "./../../assets/icons/twitter.svg"
 import {ReactComponent as Instagram} from "./../../assets/icons/instagram.svg"
 import "./footer.css"
 
-
 function Footer() {
     return (
         <footer>
