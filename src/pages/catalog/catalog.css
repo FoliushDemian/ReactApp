@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-content {
+    display: flex;
+    position: sticky;
+}
+
+aside {
+    width: 25vw;
+    height: 105vh;
+    display: flex;
+    flex-direction: column;
+    top: 15vh;
+    border-right: 0.2vw solid #43b02a;
+    padding: 5vh 3vw 0;
+    text-align: left;
+    margin-bottom: -14.5%;
+}
+
+.searchSec {
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3vh;
+}
+
+.searchSec input[type=text] {
+    width: 70%;
+    height: 100%;
+    border-radius: 1vw;
+    border: none;
+    padding-left: 1vw;
+    outline-style: none;
+    color: black;
+    background-color: #EFF0F0;
+}
+
+.searchSec button {
+    width: 25%;
+    height: 100%;
+    background-color: #EFF0F0;
+    border: none;
+    border-radius: 1vw;
+    font-weight: bold;
+    color: #43b02a;
+    transition: 0.3s;
+}
+
+.searchSec button:hover {
+    background-color: transparent;
+    border: 0.2vw solid #43b02a;
+}
+
+aside input[type=text]::placeholder {
+    color: #43b02a;
+}
+
+aside h2 {
+    color: #43b02a;
+    margin-bottom: 1vh;
+}
+
+.sortCat {
+    display: flex;
+}
+
+.sortCat input {
+    margin-right: 0.5vw;
+    cursor: pointer;
+}
+
+.sortCat input:checked {
+    accent-color: #43b02a;
+}
+
+.sortCat label {
+    color: #43b02a;
+    cursor: pointer;
+}
+
+.sortCat:last-of-type {
+    margin-bottom: 3vh;
+}
+
+aside p {
+    font-weight: bold;
+    color: #43b02a;
+}
+
+aside p span {
+    font-weight: normal;
+}
