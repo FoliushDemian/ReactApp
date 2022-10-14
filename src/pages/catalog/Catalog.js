@@ -36,7 +36,8 @@ class Catalog extends React.Component {
                     name: 'Аскорбінова кислота',
                     price: 15,
                     img: 'аскорбінка.jfif'
-                },
+                }
+                ,
                 {
                     id: 6,
                     name: 'Мовіназа',
@@ -46,22 +47,23 @@ class Catalog extends React.Component {
             ]
         }
     }
+
     render() {
         return (
             <main-content>
                 <aside>
-                    <div class="searchSec">
+                    <div className="searchSec">
                         <input type="text" id="search" placeholder="Search..." />
-                        <button onclick="searchCar()">Search</button>
+                        <button >Search</button> {/* onclick="searchCar()" */}
                     </div>
                     <h2>Sort by:</h2>
-                    <div class="sortCat">
-                        <input type="checkbox" id="name" onclick="sortByName()" />
-                        <label for="name">name</label>
+                    <div className="sortCat">
+                        <input type="checkbox" id="name"  /> {/* onclick="sortByName()" */}
+                        <label >name</label>{/* for="name" */}
                     </div>
-                    <div class="sortCat">
-                        <input type="checkbox" id="price" onclick="sortByPrice()" />
-                        <label for="price">price</label>
+                    <div className="sortCat">
+                        <input type="checkbox" id="price"  />{/* onclick="sortByPrice()" */}
+                        <label >price</label> {/* for="price" */}
                     </div>
                     <p>Total price: <span id="totalPrice"></span></p>
                 </aside>

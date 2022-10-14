@@ -1,19 +1,16 @@
-import React, { Component } from "react";
-import "../../index.css"
+import "./../../components/medicine/items.css";
 
-export class Item extends Component {
-    render() {
-        return (
-            <div className="item">
-                <img src={"./img/" + this.props.item.img} />
-                <h2>{this.props.item.name}</h2>
-                <div className="info">
-                <b>price: {this.props.item.price}$</b>
+export function Item(props) {
+    return (
+        <div className="item">
+            <img src={"./img/" + props.item.img}/>
+            <h2>{props.item.name}</h2>
+            <div className="info">
+                <b>price: {props.item.price}$</b>
                 <button className="button-medicine">View more</button>
-                </div>
-            </div> 
-        )
-    }
+            </div>
+        </div>
+    )
 }
 
 export default Item;
