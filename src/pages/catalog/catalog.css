@@ -40,22 +40,6 @@ aside {
     background-color: #EFF0F0;
 }
 
-.searchSec button {
-    width: 25%;
-    height: 100%;
-    background-color: #EFF0F0;
-    border: none;
-    border-radius: 1vw;
-    font-weight: bold;
-    color: #43b02a;
-    transition: 0.3s;
-}
-
-.searchSec button:hover {
-    background-color: transparent;
-    border: 0.2vw solid #43b02a;
-}
-
 aside input[type=text]::placeholder {
     color: #43b02a;
 }

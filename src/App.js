@@ -3,6 +3,7 @@ import Footer from "./layouts/footer/Footer";
 import Header from "./layouts/header/Header";
 import Home from "./pages/home/Home";
 import Catalog from "./pages/catalog/Catalog";
+import SinglePage from "./pages/catalog/SinglePage";
 import Cart from "./pages/cart/Cart";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/catalog" element={<Catalog />} />
+        <Route path="/drug" element={<SinglePage />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
       <Footer />

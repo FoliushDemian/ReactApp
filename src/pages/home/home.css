@@ -55,6 +55,7 @@ main {
 }
 
 .view-more {
+    margin-top: 10%;
     width: 20%;
     height: 8vh;
     border-radius: 25px;
@@ -80,7 +81,7 @@ main {
 .awards {
     display: flex;
     justify-content: space-between;
-    margin-top: 10%;
+    margin-top: 6%;
 }
 
 .awards img {
@@ -108,4 +109,9 @@ main {
 .awards-text span {
     color: #43b02a !important;
     text-decoration: none;
+}
+
+.newSection {
+    margin-top: 10%;
+    border: red 2px solid;
 }
