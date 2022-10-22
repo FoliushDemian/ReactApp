@@ -59,6 +59,7 @@ function Catalog() {
     };
 
     const handleSortByPrice = () => {
+        document.querySelector('#name').checked = false;
         setItems(prevItems => sortByPrice([...prevItems])
         )
     };
@@ -72,13 +73,10 @@ function Catalog() {
     };
 
     const handleSortByName = () => {
+        document.querySelector('#price').checked = false;
         setItems(prevItems => sortByName([...prevItems])
     )};
     
-
-    // const arr = items.map(el => {
-    //     return <Item key={el.id} item={el} />
-    // });
 
     const [value, setValue] = useState('')
 
