@@ -51,31 +51,16 @@ aside h2 {
 
 .sortCat {
     display: flex;
+    margin: 5%;
 }
 
-.sortCat input {
-    margin-right: 0.5vw;
-    cursor: pointer;
-}
-
-.sortCat input:checked {
-    accent-color: #43b02a;
-}
-
-.sortCat label {
+.sortCat a {
     color: #43b02a;
-    cursor: pointer;
+    text-decoration: none;
 }
 
-.sortCat:last-of-type {
-    margin-bottom: 3vh;
-}
-
-aside p {
-    font-weight: bold;
-    color: #43b02a;
-}
-
-aside p span {
-    font-weight: normal;
+.sortCat a:hover {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
 }

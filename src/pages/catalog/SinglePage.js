@@ -1,28 +1,39 @@
-import { useLocation } from "react-router-dom"
-import "./singlePage.css"
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom"
+import "./singlePage.css";
+import Loader from "../../components/loader/Loader";
 
 function SinglePage() {
-    const location = useLocation();
-    const state = location.state;
-    console.log(state.img);
-    return (
-        <div className="drug">
-            {state && (<><div className="page">
-                <div className="image"><img src={state.img} /></div>
-                <div className="content-drug">
-                    <h1>{state.name}</h1>
-                    <p>{state.description}</p>
-                </div>
-            </div>
-            <div className="footer-page">
-                    <h3>price: {state.price}$</h3>
-                    <button >Go back</button>
-                    <button className="add-to-cart">Add to cart</button>
-                </div>
-            </>
-            )}
-        </div>
+    let { id } = useParams();
 
+    const [loading, setloading] = useState(true)
+    useEffect(() => { setTimeout(() => { setloading(false) }, 2000 )}, [])
+
+    const [medicine, setMedicine] = useState({ id: 1, name: "not found", price: 0, image: " ", description: " " })
+    useEffect(() => { axios.get(`http://localhost:8080/catalog/${id}`).then(res => setMedicine(res.data)) }, [id])
+
+    return (
+        <>
+            {loading ?
+                <Loader />
+                :
+                <div className="drug">
+                    <div className="page">
+                        <div className="image"><img src={medicine.image} /></div>
+                        <div className="content-drug">
+                            <h1>{medicine.name}</h1>
+                            <p>{medicine.description}</p>
+                        </div>
+                    </div>
+                    <div className="footer-page">
+                        <h3>price: {medicine.price}$</h3>
+                        <Link className="go-back" to='/catalog'><button>Go back</button></Link>
+                        <button className="add-to-cart">Add to cart</button>
+                    </div>
+                </div >
+            }
+        </>
     )
 }
 

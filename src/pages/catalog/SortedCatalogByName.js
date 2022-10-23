@@ -4,38 +4,10 @@ import Item from "../../components/medicine/item";
 import axios from "axios";
 import Loader from "../../components/loader/Loader";
 
-function Catalog() {
+function SortedCatalogByName() {
 
     const [medicaments, setMedicaments] = useState([{ id: 1, name: 'Not found', price: 0, image: '', description: '' }])
-    useEffect(() => { axios.get('http://localhost:8080/catalog').then(res => setMedicaments(res.data)) }, []);
-
-
-    // const sortByPrice = (arr) => {
-    //     const sorted = arr.sort((a, b) =>
-    //         a.price > b.price ? 1 : -1
-    //     )
-    //     return sorted;
-    // };
-
-    // const handleSortByPrice = () => {
-    //     document.querySelector('#name').checked = false;
-    //     setMedicaments(prevMedicaments => sortByPrice([...prevMedicaments])
-    //     )
-    // };
-
-
-    // const sortByName = (arr) => {
-    //     const sorted = arr.sort((a, b) =>
-    //         a.name > b.name ? 1 : -1
-    //     )
-    //     return sorted;
-    // };
-
-    // const handleSortByName = () => {
-    //     document.querySelector('#price').checked = false;
-    //     setMedicaments(prevMedicaments => sortByName([...prevMedicaments])
-    //     )
-    // };
+    useEffect(() => { axios.get('http://localhost:8080/catalog/sortByName').then(res => setMedicaments(res.data)) }, []);
 
     const [value, setValue] = useState('')
 
@@ -44,7 +16,7 @@ function Catalog() {
     })
 
     const [loading, setloading] = useState(true)
-    useEffect(() => {setTimeout(() => { setloading(false) }, 2000)}, [])
+    useEffect(() => { setTimeout(() => { setloading(false) }, 2000) }, [])
 
 
     return (
@@ -80,4 +52,4 @@ function Catalog() {
     )
 }
 
-export default Catalog;
+export default SortedCatalogByName;
