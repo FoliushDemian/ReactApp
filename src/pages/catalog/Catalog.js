@@ -9,34 +9,6 @@ function Catalog() {
     const [medicaments, setMedicaments] = useState([{ id: 1, name: 'Not found', price: 0, image: '', description: '' }])
     useEffect(() => { axios.get('http://localhost:8080/catalog').then(res => setMedicaments(res.data)) }, []);
 
-
-    // const sortByPrice = (arr) => {
-    //     const sorted = arr.sort((a, b) =>
-    //         a.price > b.price ? 1 : -1
-    //     )
-    //     return sorted;
-    // };
-
-    // const handleSortByPrice = () => {
-    //     document.querySelector('#name').checked = false;
-    //     setMedicaments(prevMedicaments => sortByPrice([...prevMedicaments])
-    //     )
-    // };
-
-
-    // const sortByName = (arr) => {
-    //     const sorted = arr.sort((a, b) =>
-    //         a.name > b.name ? 1 : -1
-    //     )
-    //     return sorted;
-    // };
-
-    // const handleSortByName = () => {
-    //     document.querySelector('#price').checked = false;
-    //     setMedicaments(prevMedicaments => sortByName([...prevMedicaments])
-    //     )
-    // };
-
     const [value, setValue] = useState('')
 
     const filteredItems = medicaments.filter(item => {
@@ -59,10 +31,10 @@ function Catalog() {
                         </div>
                         <h2>Sort by:</h2>
                         <div className="sortCat">
-                            <a href="/sortedCatalogByName">name</a>
-                        </div>
-                        <div className="sortCat">
-                            <a href="/sortedCatalogByPrice">price</a>
+                            <ul>
+                            <li><a href="/sortedCatalogByName">name</a></li>
+                            <li><a href="/sortedCatalogByPrice">price</a></li>
+                            </ul>
                         </div>
                     </aside>
                     <div className="main-chapter">

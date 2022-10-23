@@ -51,7 +51,7 @@ aside h2 {
 
 .sortCat {
     display: flex;
-    margin: 5%;
+    margin-left: 13%;
 }
 
 .sortCat a {
@@ -59,8 +59,12 @@ aside h2 {
     text-decoration: none;
 }
 
-.sortCat a:hover {
+.sortCat li:hover {
     -webkit-transform: scale(1.5);
     -ms-transform: scale(1.5);
     transform: scale(1.5);
+}
+
+ul {
+    color: #43b02a;
 }

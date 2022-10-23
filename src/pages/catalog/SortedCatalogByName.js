@@ -31,10 +31,10 @@ function SortedCatalogByName() {
                         </div>
                         <h2>Sort by:</h2>
                         <div className="sortCat">
-                            <a href="/sortedCatalogByName">name</a>
-                        </div>
-                        <div className="sortCat">
-                            <a href="/sortedCatalogByPrice">price</a>
+                            <ul>
+                            <li><a href="/sortedCatalogByName">name</a></li>
+                            <li><a href="/sortedCatalogByPrice">price</a></li>
+                            </ul>
                         </div>
                     </aside>
                     <div className="main-chapter">
