@@ -60,9 +60,9 @@ aside h2 {
 }
 
 .sortCat li:hover {
-    -webkit-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    transform: scale(1.5);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 ul {

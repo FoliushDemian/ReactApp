@@ -16,7 +16,7 @@ function SortedCatalogByPrice() {
     })
 
     const [loading, setloading] = useState(true)
-    useEffect(() => { setTimeout(() => { setloading(false) }, 2000) }, [])
+    useEffect(() => { setTimeout(() => { setloading(false) }, 1000) }, [])
 
 
     return (

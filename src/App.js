@@ -9,6 +9,7 @@ import SinglePage from "./pages/catalog/SinglePage";
 import Cart from "./pages/cart/Cart";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
+
 function App() {
   return (
     <Router>
